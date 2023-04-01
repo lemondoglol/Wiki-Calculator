@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2740628166160081" />
+        <entry key="app/src/main/res/drawable/ic_tax_svgrepo_com.xml" value="0.106" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_wiki_launcher.xml" value="0.1855" />
       </map>
     </option>

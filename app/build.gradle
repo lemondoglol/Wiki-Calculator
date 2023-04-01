@@ -5,6 +5,9 @@ plugins {
     // hilt
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+
+    // safeArgs
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {

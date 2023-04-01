@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Wiki Calculator</string>
+    <string name="tax_calculator">Tax Calculator</string>
 </resources>
