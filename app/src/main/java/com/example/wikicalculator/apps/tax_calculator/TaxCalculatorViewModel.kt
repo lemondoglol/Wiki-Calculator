@@ -1,7 +1,5 @@
 package com.example.wikicalculator.apps.tax_calculator
 
-import android.content.SharedPreferences
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -9,12 +7,13 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.wikicalculator.apps.tax_calculator.model.*
 import com.example.wikicalculator.apps.tax_calculator.util.*
+import com.example.wikicalculator.data.datainterface.UserPreferencesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class TaxCalculatorViewModel @Inject constructor(
-    sharedPreferences: SharedPreferences,
+    private val userPreferencesRepository: UserPreferencesRepository,
 ) : ViewModel() {
 
     internal var totalSalary by mutableStateOf(0f)

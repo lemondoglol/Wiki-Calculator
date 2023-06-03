@@ -2,6 +2,9 @@ package com.example.wikicalculator.di
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import com.example.wikicalculator.core.ApplicationCoroutineScope
 import dagger.Module
 import dagger.Provides
@@ -14,6 +17,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    private val Context.userDataStore: DataStore<Preferences> by preferencesDataStore(
+        name = "com.example.wikicalculator"
+    )
 
     @Provides
     @Singleton
@@ -28,4 +35,9 @@ object AppModule {
     @Singleton
     fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences =
         context.getSharedPreferences("MY_DATA", Context.MODE_PRIVATE)
+
+    @Provides
+    @Singleton
+    fun providePreferencesDataStore(@ApplicationContext context: Context): DataStore<Preferences> =
+        context.userDataStore
 }

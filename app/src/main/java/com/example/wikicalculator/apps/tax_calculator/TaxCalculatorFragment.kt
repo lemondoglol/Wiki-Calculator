@@ -11,16 +11,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.wikicalculator.apps.tax_calculator.model.IncomeTaxInfo
 import com.example.wikicalculator.core.model.Padding
 import com.example.wikicalculator.ui.RadicalShaderBrush
 import dagger.hilt.android.AndroidEntryPoint
