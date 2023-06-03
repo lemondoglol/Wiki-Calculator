@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Wiki Calculator</string>
     <string name="tax_calculator">Tax Calculator</string>
+    <string name="IncomeLabel">Income</string>
+    <string name="IncomeHint">Box 1</string>
+    <string name="FederalTaxWithHold">Federal Tax WithHold</string>
+    <string name="FederalTaxWithHoldHint">Box 2</string>
+    <string name="StateTaxWithHold">State Tax WithHold</string>
+    <string name="StateTaxWithHoldHint">Box 17</string>
+    <string name="Add_More_Income">Add more income</string>
+    <string name="Calculate">Calculate</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
 </resources>

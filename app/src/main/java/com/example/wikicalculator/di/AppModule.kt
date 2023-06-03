@@ -1,6 +1,7 @@
 package com.example.wikicalculator.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import com.example.wikicalculator.core.ApplicationCoroutineScope
 import dagger.Module
 import dagger.Provides
@@ -22,4 +23,9 @@ object AppModule {
     @Singleton
     internal fun provideApplicationCoroutineScope(): ApplicationCoroutineScope =
         ApplicationCoroutineScope(SupervisorJob())
+
+    @Provides
+    @Singleton
+    fun provideSharedPreference(@ApplicationContext context: Context): SharedPreferences =
+        context.getSharedPreferences("MY_DATA", Context.MODE_PRIVATE)
 }
