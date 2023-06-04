@@ -8,8 +8,8 @@ import androidx.compose.ui.graphics.Shader
 import androidx.compose.ui.graphics.ShaderBrush
 
 fun RadicalShaderBrush(
-    color1: Color = Color(0xFF2be4dc),
-    color2: Color = Color(0xFF243484),
+    color1: Color = Color(151,252,252),
+    color2: Color = Color(220, 230, 190),
 ): ShaderBrush {
     return object : ShaderBrush() {
         override fun createShader(size: Size): Shader {

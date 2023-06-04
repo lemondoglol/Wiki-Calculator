@@ -29,4 +29,13 @@ data class TaxResult(
     val fileMarriedSeparately: Float = 0f,
     val fileMarriedJointly: Float = 0f,
     val fileHouseHold: Float = 0f,
-)
+) {
+    override fun toString(): String {
+        return "file as single for user 1: $" + fileSingleUser1 + "\n" +
+                "file as single for user 2: $" + fileSingleUser2 + "\n" +
+                "file as single combined for both users: $" + fileSingleCombined + "\n" +
+                "file as married jointly: $" + fileMarriedJointly + "\n" +
+                "file as married separately: $" + fileMarriedSeparately + "\n" +
+                "file as household: $" + fileHouseHold + "\n"
+    }
+}

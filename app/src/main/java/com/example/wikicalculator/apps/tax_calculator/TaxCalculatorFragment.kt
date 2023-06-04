@@ -68,6 +68,8 @@ class TaxCalculatorFragment : Fragment() {
                 currentUserId = viewModel.currentUserId,
                 onBackButtonClick = viewModel::switchToUser1,
                 onNextButtonClick = viewModel::switchToUser2,
+                onResultDismissButtonClicked = viewModel::onResultDismissButtonClicked,
+                isShowingResult = viewModel.isShowingResult,
             )
         }
 

@@ -18,3 +18,10 @@ fun HorizontalSpacerAndDivider(
     Divider(thickness = dividerThickness)
     Spacer(modifier = Modifier.height(paddingSize))
 }
+
+@Composable
+fun HorizontalSpacer(
+    paddingSize: Dp = Padding.paddingS,
+) {
+    Spacer(modifier = Modifier.height(paddingSize))
+}

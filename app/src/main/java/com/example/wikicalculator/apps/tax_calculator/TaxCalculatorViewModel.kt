@@ -32,6 +32,9 @@ class TaxCalculatorViewModel @Inject constructor(
     internal var calculatedResult by mutableStateOf(TaxResult())
         private set
 
+    internal var isShowingResult by mutableStateOf(false)
+        private set
+
     internal fun onIncomeInputRowDataChanged(
         userId: Int,
         rowIndex: Int,
@@ -58,6 +61,7 @@ class TaxCalculatorViewModel @Inject constructor(
 
     //
     internal fun clickCalculateButton() {
+        isShowingResult = true
         totalIncome = 0f
         var user1TotalIncome = 0f
         var user2TotalIncome = 0f
@@ -78,6 +82,10 @@ class TaxCalculatorViewModel @Inject constructor(
             fileMarriedJointly = calculateTaxForMarriedJoint(totalIncome),
             fileHouseHold = calculateTaxForHouseHold(totalIncome),
         )
+    }
+
+    internal fun onResultDismissButtonClicked() {
+        isShowingResult = false
     }
 
     /**
