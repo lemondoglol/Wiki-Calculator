@@ -57,6 +57,7 @@ dependencies {
     implementation "androidx.compose.material:material:1.4.0"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.activity:activity-compose:1.7.0'
+    implementation 'androidx.compose.runtime:runtime:1.4.3'
 
     // nav graph
     def nav_version = "2.5.3"
@@ -76,6 +77,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Youtube
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.0'
 }
 
 // Allow references to generated code

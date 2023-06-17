@@ -10,7 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import com.example.wikicalculator.R
 import com.example.wikicalculator.apps.tax_calculator.TaxCalculatorViewModel.Companion.USER_ID_1
@@ -101,7 +100,7 @@ private fun UserSection(
             fontSize = FontSize.fontSizeM,
             text = "User ${userTaxInfo.userId}",
         )
-        HorizontalSpacer()
+        VerticalSpacer()
 
         // User Incomes Input Section
         repeat(userTaxInfo.incomeInfoList.size) {

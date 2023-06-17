@@ -12,4 +12,7 @@
     <string name="back">Back</string>
     <string name="next">Next</string>
     <string name="dismiss">Dismiss</string>
+    <string name="give_me_some_surprise">Give me some surprise!</string>
+    <string name="lets_see_what_we_can_make">Let\'s see what we can make with existing materials</string>
+    <string name="purchase_link">Purchase Link</string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.wikicalculator.core.ui
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,8 +21,15 @@ fun HorizontalSpacerAndDivider(
 }
 
 @Composable
-fun HorizontalSpacer(
+fun VerticalSpacer(
     paddingSize: Dp = Padding.paddingS,
 ) {
     Spacer(modifier = Modifier.height(paddingSize))
+}
+
+@Composable
+fun HorizontalSpacer(
+    paddingSize: Dp = Padding.paddingS,
+) {
+    Spacer(modifier = Modifier.width(paddingSize))
 }

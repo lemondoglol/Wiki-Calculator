@@ -11,9 +11,31 @@
         <action
             android:id="@+id/action_homeFragment_to_taxCalculatorFragment"
             app:destination="@id/taxCalculatorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_foodDashFragment"
+            app:destination="@id/foodDashFragment" />
     </fragment>
     <fragment
         android:id="@+id/taxCalculatorFragment"
         android:name="com.example.wikicalculator.apps.tax_calculator.TaxCalculatorFragment"
         android:label="TaxCalculatorFragment" />
+    <fragment
+        android:id="@+id/foodDashFragment"
+        android:name="com.example.wikicalculator.apps.fooddash.FoodDashFragment"
+        android:label="FoodDashFragment" >
+        <action
+            android:id="@+id/action_foodDashFragment_to_receiptSuggestionFragment"
+            app:destination="@id/receiptSuggestionFragment" />
+        <action
+            android:id="@+id/action_foodDashFragment_to_whatWeCanMakeFragment"
+            app:destination="@id/whatWeCanMakeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiptSuggestionFragment"
+        android:name="com.example.wikicalculator.apps.fooddash.suggestions.ReceiptSuggestionFragment"
+        android:label="ReceiptSuggestionFragment" />
+    <fragment
+        android:id="@+id/whatWeCanMakeFragment"
+        android:name="com.example.wikicalculator.apps.fooddash.existingmaterial.WhatWeCanMakeFragment"
+        android:label="WhatWeCanMakeFragment" />
 </navigation>

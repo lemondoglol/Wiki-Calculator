@@ -2,6 +2,7 @@ package com.example.wikicalculator.core.ui
 
 import android.icu.util.UniversalTimeScale.toBigDecimal
 import android.util.Log
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.OutlinedTextField
@@ -9,9 +10,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.TextUnit
 import com.example.wikicalculator.core.model.FontSize
 import java.text.DecimalFormat
@@ -65,5 +71,30 @@ fun DecimalOutLinedInputTextField(
             keyboardType = KeyboardType.Decimal,
         ),
         keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() })
+    )
+}
+
+@Composable
+fun ClickableLink(
+    modifier: Modifier = Modifier,
+    url: String,
+    text: String,
+    onClick: () -> Unit,
+) {
+    val annotatedString = buildAnnotatedString {
+        pushStringAnnotation(
+            tag = "URL",
+            annotation = url
+        )
+        withStyle(style = SpanStyle(color = Color.Blue, textDecoration = TextDecoration.Underline)) {
+            append(text)
+        }
+        pop()
+    }
+
+    Text(
+        modifier = modifier.clickable(onClick = { onClick() }),
+        text = annotatedString,
+        fontSize = FontSize.fontSizeSP
     )
 }
